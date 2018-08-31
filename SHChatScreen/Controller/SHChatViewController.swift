@@ -21,6 +21,10 @@ class SHChatViewController: UIViewController,UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        //Tap to dismiss keyboard
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +41,11 @@ class SHChatViewController: UIViewController,UITextViewDelegate {
         messageTextView.layer.masksToBounds = true
         sendButton.layer.cornerRadius = 20
         sendButton.layer.masksToBounds = true
+    }
+    
+    // function which is triggered when handleTap is called
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+       view.endEditing(true)
     }
     
     //Handle Keyboard
@@ -96,6 +105,7 @@ class SHChatViewController: UIViewController,UITextViewDelegate {
             messageTextView.isScrollEnabled = false
             view.endEditing(true)
             chatTableView.reloadData()
+            
         }
     }
 }

@@ -2,9 +2,7 @@
 //  AppDelegate.swift
 //  SHChatScreen
 //
-//  Created by Focaloid Technologies on 30/08/18.
-//  Copyright © 2018 SH. All rights reserved.
-//
+
 
 import UIKit
 

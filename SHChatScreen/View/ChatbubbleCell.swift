@@ -2,9 +2,6 @@
 //  ChatbubbleCell.swift
 //  ChatScreen
 //
-//  Created by Focaloid Technologies on 27/08/18.
-//  Copyright © 2018 SH. All rights reserved.
-//
 
 import UIKit
 
